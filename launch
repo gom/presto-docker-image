@@ -1,0 +1,6 @@
+#!/bin/sh
+PWD=$(cd $(dirname $0) && pwd)
+
+docker run --rm -p 8080:8080 \
+    -v $PWD/etc:/presto/etc \
+    gom68/presto
